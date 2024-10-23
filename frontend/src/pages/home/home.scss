@@ -1,0 +1,41 @@
+.home{
+    width: 100%;
+    height: 100dvh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .banner{
+        transition: .5s ease;
+    }
+    .login , .resetpassword{
+        transition: .5s ease;
+    }
+    &.move-left .banner{
+        transform: translateX(-100%);
+    }
+    &.move-up .resetpassword{
+        transform: translateY(0);
+    }
+    &.move-up .login{
+        transform: translateY(-100%);
+    }
+}
+@media screen and (max-width: 844px) {
+    
+    .home{
+        .signup{
+            transition: .5s ease;  
+        }
+        &.move-left .signup{
+            transform: translateX(0%);
+        }
+        &.move-left .login{
+            transform: translateX(-100%);
+        }
+
+    }
+}
